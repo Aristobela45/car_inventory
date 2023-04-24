@@ -9,37 +9,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="../static/css/style.css">
-    <title>Car Inventory APi</title>
+    <title>Car Inventory</title>
 </head>
 
 <body>
     <!--NavBar here-->
     <nav class="ct-nav">
         <div>
-            <img src="../static/images/car_inventory_logo.png " alt>"Car inventory logo">
+            <img src=" " alt>"Car inventory logo">
         </div>
 
         <!--Nav Items-->
         <div>
             <ul id="horizontal-list">
-                <a href="#">
-                    <li>Purchase</li>
+                <a href="{{ url_for('site.home') }}">
+                    <li>Car Inventory</li>
                 </a>
-                <a href="#">
-                    <li>Purchase</li>
+                <a href="{{ url_for('site.home') }}">
+                    <li>Home</li>
                 </a>
-                <a href="#">
-                    <li>Purchase</li>
+                <a href="{{ url_for('site.profile') }}">
+                    <li>Profile</li>
                 </a>
-                <a href="#">
-                    <li>Purchase</li>
+                <a href="{{ url_for('auth.logout') }}">
+                    <li>Log Out</li>
                 </a>
-                <a href="#">
-                    <li>Purchase</li>
+                <a href="{{ url_for('auth.signin') }}">
+                    <li>Sign In</li>
                 </a>
-                <a href="#">
-                    <li>Purchase</li>
+                <a href="{{ url_for('auth.signup') }}">
+                    <li>Sign Up</li>
                 </a>
+                {% endif %}
             </ul>
         </div>
     </nav>
